@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * 处理应用程序主页的请求
@@ -33,7 +34,19 @@ public class HomeController {
 		String formattedDate = formater.format(date);
 		model.addAttribute("serverTime", formattedDate );
 		return formattedDate;
-		//return "home";
+	}
+	@RequestMapping(value = "/index", method = RequestMethod.GET)
+	public String mvTest(String index){
+		return index;
+	}
+
+	@RequestMapping(value="mv", method = RequestMethod.GET)
+	public ModelAndView modelAndViewTest(String str){
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("testVal","testModealAndView");
+		mv.addObject("mv",str);
+		mv.setViewName("viewTest");
+		return mv;
 	}
 
 }
