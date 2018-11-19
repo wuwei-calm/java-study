@@ -19,10 +19,25 @@
       <param-name>contextConfigLocation</param-name>
       <param-value>classpath:spring-mvc.xml</param-value>
     </init-param>
+    <init-param>
+      <param-name>enableLoggingRequestDetails</param-name>
+      <param-value>true</param-value>
+    </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
     <servlet-name>appServlet</servlet-name>
-    <url-pattern>/</url-pattern>
+    <url-pattern>/*</url-pattern>
   </servlet-mapping>
+
+  <!--<servlet>-->
+    <!--<servlet-name>httpTest</servlet-name>-->
+    <!--<servlet-class>com.test.framework.servlet.HttpServletTest</servlet-class>-->
+  <!--</servlet>-->
+  <!--<servlet-mapping>-->
+    <!--<servlet-name>httpTest</servlet-name>-->
+    <!--<url-pattern>/servlet/httpTest/*</url-pattern>-->
+  <!--</servlet-mapping>-->
+
+
 </web-app>
