@@ -11,7 +11,43 @@
 	(object Attribute
 	    tool       	"Java"
 	    name       	"IDE"
-	    value      	"Internal Editor"))
+	    value      	"Internal Editor")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagName1"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagText1"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagApply1"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagName2"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagText2"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagApply2"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagName3"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagText3"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagApply3"
+	    value      	""))
     quid       	"5BE65F110391"
     enforceClosureAutoLoad 	FALSE
     defaults   	(object defaults
@@ -52,13 +88,31 @@
 				supplier   	"DispatcherServlet"
 				quidu      	"5BE66D1C00C9"
 				messages   	(list Messages
-				    (object Message "调用自己的logRequest(HttpServletRequest request)方法执行请求日志打印"
-					quid       	"5BE66D8F01AE"
+				    (object Message "doService(HttpServletRequest request, HttpServletResponse response)"
+					quid       	"5BF29B8A017D"
 					frequency  	"Aperiodic"
 					synchronization 	"Simple"
 					dir        	"FromClientToSupplier"
 					sequence   	"1"
 					ordinal    	0
+					quidu      	"000000000000"
+					creation   	FALSE)
+				    (object Message "调用自己的logRequest(HttpServletRequest request)方法执行请求日志打印"
+					quid       	"5BF29BF80354"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	"1.1"
+					ordinal    	1
+					quidu      	"000000000000"
+					creation   	FALSE)
+				    (object Message ""
+					quid       	"5BF29C5A01FE"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	"1.1.1"
+					ordinal    	2
 					quidu      	"000000000000"
 					creation   	FALSE))))
 			persistence 	"Transient"
@@ -110,35 +164,49 @@
 			    fill_color 	13434879
 			    anchor_loc 	1
 			    nlines     	2
-			    max_width  	782
+			    max_width  	594
 			    justify    	0
 			    label      	"DispatcherServlet")
 			icon_style 	"Icon"
 			line_color 	3342489
 			fill_color 	13434879
 			quidu      	"5BE66D1C00C9"
-			width      	800
-			height     	1142
+			width      	612
+			height     	705
 			icon_height 	0
 			icon_width 	0
 			icon_y_offset 	0
 			annotation 	1
 			Focus_Of_Control 	(object Focus_Of_Control "" @3
-			    location   	(747, 415)
+			    location   	(747, 382)
 			    line_color 	3342489
 			    InterObjView 	@2
 			    height     	90
 			    y_coord    	0
 			    Nested     	FALSE)
 			Focus_Of_Control 	(object Focus_Of_Control "" @4
-			    location   	(747, 440)
+			    location   	(747, 407)
 			    line_color 	3342489
 			    InterObjView 	@2
-			    height     	837
-			    y_coord    	747
+			    height     	195
+			    y_coord    	105
+			    Nested     	TRUE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @5
+			    location   	(747, 537)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	278
+			    y_coord    	188
+			    Nested     	TRUE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @6
+			    location   	(747, 750)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	90
+			    y_coord    	0
 			    Nested     	TRUE))
-		    (object SelfMessView "调用自己的logRequest(HttpServletRequest request)方法执行请求日志打印" @5
-			location   	(0, 415)
+		    (object SelfMessView "doService(HttpServletRequest request, HttpServletResponse response)" @7
+			location   	(0, 382)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -148,9 +216,9 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object SegLabel @6
-			    Parent_View 	@5
-			    location   	(1455, 380)
+			label      	(object SegLabel @8
+			    Parent_View 	@7
+			    location   	(838, 338)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -160,23 +228,103 @@
 				strike     	FALSE
 				color      	0
 				default_color 	TRUE)
-			    quidu      	"5BE66D8F01AE"
+			    quidu      	"5BF29B8A017D"
 			    anchor_loc 	1
 			    nlines     	1
-			    max_width  	1411
+			    max_width  	1286
 			    justify    	0
-			    label      	"调用自己的logRequest(HttpServletRequest request)方法执行请求日志打印"
-			    pctDist    	4.620000
-			    height     	36
+			    label      	"doService(HttpServletRequest request, HttpServletResponse response)"
+			    pctDist    	0.500000
+			    height     	45
 			    orientation 	0)
 			line_color 	3342489
 			client     	@2
 			supplier   	@2
 			Focus_Src  	@3
 			Focus_Entry 	@4
-			origin     	(763, 415)
-			terminus   	(913, 415)
-			ordinal    	0)))))
+			origin     	(763, 382)
+			terminus   	(913, 382)
+			ordinal    	0)
+		    (object SelfMessView "调用自己的logRequest(HttpServletRequest request)方法执行请求日志打印" @9
+			location   	(0, 512)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object SegLabel @10
+			    Parent_View 	@9
+			    location   	(837, 557)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    quidu      	"5BF29BF80354"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	1412
+			    justify    	0
+			    label      	"调用自己的logRequest(HttpServletRequest request)方法执行请求日志打印"
+			    pctDist    	0.493333
+			    height     	45
+			    orientation 	1)
+			line_color 	3342489
+			client     	@2
+			supplier   	@2
+			Focus_Src  	@4
+			Focus_Entry 	@5
+			origin     	(763, 512)
+			terminus   	(913, 512)
+			ordinal    	1)
+		    (object SelfMessView "" @11
+			location   	(0, 725)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object SegLabel @12
+			    Parent_View 	@11
+			    location   	(838, 681)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    quidu      	"5BF29C5A01FE"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	""
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@2
+			Focus_Src  	@5
+			Focus_Entry 	@6
+			origin     	(763, 725)
+			terminus   	(913, 725)
+			ordinal    	2)))))
     root_category 	(object Class_Category "Logical View"
 	quid       	"5BE65F110392"
 	exportControl 	"Public"
@@ -274,7 +422,7 @@
 		origin_x   	0
 		origin_y   	4550
 		items      	(list diagram_item_list
-		    (object ClassView "Class" "Logical View::DispatcherServlet" @7
+		    (object ClassView "Class" "Logical View::DispatcherServlet" @13
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
@@ -289,7 +437,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@7
+			    Parent_View 	@13
 			    location   	(1498, 3194)
 			    fill_color 	13434879
 			    nlines     	1
@@ -304,7 +452,7 @@
 			height     	126
 			annotation 	8
 			autoResize 	TRUE)
-		    (object ClassView "Class" "Logical View::FrameworkServlet" @8
+		    (object ClassView "Class" "Logical View::FrameworkServlet" @14
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
@@ -319,7 +467,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@8
+			    Parent_View 	@14
 			    location   	(1487, 2738)
 			    fill_color 	13434879
 			    nlines     	1
@@ -334,17 +482,17 @@
 			height     	126
 			annotation 	8
 			autoResize 	TRUE)
-		    (object InheritView "" @9
+		    (object InheritView "" @15
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"5BE661EE024D"
-			client     	@7
-			supplier   	@8
+			client     	@13
+			supplier   	@14
 			vertices   	(list Points
 			    (1669, 3181)
 			    (1669, 2852))
 			line_style 	0)
-		    (object ClassView "Class" "Logical View::HttpServletBean" @10
+		    (object ClassView "Class" "Logical View::HttpServletBean" @16
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
@@ -359,7 +507,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@10
+			    Parent_View 	@16
 			    location   	(1298, 2401)
 			    fill_color 	13434879
 			    nlines     	1
@@ -374,17 +522,17 @@
 			height     	126
 			annotation 	8
 			autoResize 	TRUE)
-		    (object InheritView "" @11
+		    (object InheritView "" @17
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"5BE6620B005D"
-			client     	@8
-			supplier   	@10
+			client     	@14
+			supplier   	@16
 			vertices   	(list Points
 			    (1629, 2725)
 			    (1496, 2515))
 			line_style 	0)
-		    (object ClassView "Class" "Logical View::ApplicationContextAware" @12
+		    (object ClassView "Class" "Logical View::ApplicationContextAware" @18
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
@@ -399,7 +547,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@12
+			    Parent_View 	@18
 			    location   	(1967, 2435)
 			    fill_color 	13434879
 			    nlines     	1
@@ -407,7 +555,7 @@
 			    justify    	0
 			    label      	"ApplicationContextAware")
 			stereotype 	(object ItemLabel
-			    Parent_View 	@12
+			    Parent_View 	@18
 			    location   	(1967, 2385)
 			    fill_color 	13434879
 			    anchor     	10
@@ -424,17 +572,17 @@
 			height     	182
 			annotation 	8
 			autoResize 	TRUE)
-		    (object RealizeView "" @13
+		    (object RealizeView "" @19
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"5BE6621E01D5"
-			client     	@8
-			supplier   	@12
+			client     	@14
+			supplier   	@18
 			vertices   	(list Points
 			    (1771, 2725)
 			    (2055, 2555))
 			line_style 	0)
-		    (object ClassView "Class" "Logical View::HttpServlet" @14
+		    (object ClassView "Class" "Logical View::HttpServlet" @20
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
@@ -449,7 +597,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@14
+			    Parent_View 	@20
 			    location   	(665, 1835)
 			    fill_color 	13434879
 			    nlines     	1
@@ -464,17 +612,17 @@
 			height     	126
 			annotation 	8
 			autoResize 	TRUE)
-		    (object InheritView "" @15
+		    (object InheritView "" @21
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"5BE6664700F0"
-			client     	@10
-			supplier   	@14
+			client     	@16
+			supplier   	@20
 			vertices   	(list Points
 			    (1381, 2388)
 			    (858, 1949))
 			line_style 	0)
-		    (object ClassView "Class" "Logical View::EnvironmentCapable" @16
+		    (object ClassView "Class" "Logical View::EnvironmentCapable" @22
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
@@ -489,7 +637,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@16
+			    Parent_View 	@22
 			    location   	(1198, 1837)
 			    fill_color 	13434879
 			    nlines     	1
@@ -497,7 +645,7 @@
 			    justify    	0
 			    label      	"EnvironmentCapable")
 			stereotype 	(object ItemLabel
-			    Parent_View 	@16
+			    Parent_View 	@22
 			    location   	(1198, 1787)
 			    fill_color 	13434879
 			    anchor     	10
@@ -514,7 +662,7 @@
 			height     	182
 			annotation 	8
 			autoResize 	TRUE)
-		    (object ClassView "Class" "Logical View::EnvironmentAware" @17
+		    (object ClassView "Class" "Logical View::EnvironmentAware" @23
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
@@ -529,7 +677,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@17
+			    Parent_View 	@23
 			    location   	(1777, 1828)
 			    fill_color 	13434879
 			    nlines     	1
@@ -537,7 +685,7 @@
 			    justify    	0
 			    label      	"EnvironmentAware")
 			stereotype 	(object ItemLabel
-			    Parent_View 	@17
+			    Parent_View 	@23
 			    location   	(1777, 1778)
 			    fill_color 	13434879
 			    anchor     	10
@@ -554,27 +702,27 @@
 			height     	182
 			annotation 	8
 			autoResize 	TRUE)
-		    (object RealizeView "" @18
+		    (object RealizeView "" @24
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"5BE6666A0130"
-			client     	@10
-			supplier   	@16
+			client     	@16
+			supplier   	@22
 			vertices   	(list Points
 			    (1450, 2388)
 			    (1409, 1957))
 			line_style 	0)
-		    (object RealizeView "" @19
+		    (object RealizeView "" @25
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"5BE6666E0129"
-			client     	@10
-			supplier   	@17
+			client     	@16
+			supplier   	@23
 			vertices   	(list Points
 			    (1510, 2388)
 			    (1884, 1948))
 			line_style 	0)
-		    (object ClassView "Class" "Logical View::GenericServlet" @20
+		    (object ClassView "Class" "Logical View::GenericServlet" @26
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
@@ -589,7 +737,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@20
+			    Parent_View 	@26
 			    location   	(218, 1439)
 			    fill_color 	13434879
 			    nlines     	1
@@ -604,17 +752,17 @@
 			height     	126
 			annotation 	8
 			autoResize 	TRUE)
-		    (object InheritView "" @21
+		    (object InheritView "" @27
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"5BE6667F0199"
-			client     	@14
-			supplier   	@20
+			client     	@20
+			supplier   	@26
 			vertices   	(list Points
 			    (716, 1822)
 			    (431, 1553))
 			line_style 	0)
-		    (object ClassView "Class" "Logical View::Servlet" @22
+		    (object ClassView "Class" "Logical View::Servlet" @28
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
@@ -629,7 +777,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@22
+			    Parent_View 	@28
 			    location   	(69, 974)
 			    fill_color 	13434879
 			    nlines     	1
@@ -637,7 +785,7 @@
 			    justify    	0
 			    label      	"Servlet")
 			stereotype 	(object ItemLabel
-			    Parent_View 	@22
+			    Parent_View 	@28
 			    location   	(69, 924)
 			    fill_color 	13434879
 			    anchor     	10
@@ -654,7 +802,7 @@
 			height     	182
 			annotation 	8
 			autoResize 	TRUE)
-		    (object ClassView "Class" "Logical View::ServletConfig" @23
+		    (object ClassView "Class" "Logical View::ServletConfig" @29
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
@@ -669,7 +817,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@23
+			    Parent_View 	@29
 			    location   	(407, 971)
 			    fill_color 	13434879
 			    nlines     	1
@@ -677,7 +825,7 @@
 			    justify    	0
 			    label      	"ServletConfig")
 			stereotype 	(object ItemLabel
-			    Parent_View 	@23
+			    Parent_View 	@29
 			    location   	(407, 921)
 			    fill_color 	13434879
 			    anchor     	10
@@ -694,7 +842,7 @@
 			height     	182
 			annotation 	8
 			autoResize 	TRUE)
-		    (object ClassView "Class" "Logical View::Serializable" @24
+		    (object ClassView "Class" "Logical View::Serializable" @30
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
@@ -709,7 +857,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@24
+			    Parent_View 	@30
 			    location   	(1407, 753)
 			    fill_color 	13434879
 			    nlines     	1
@@ -717,7 +865,7 @@
 			    justify    	0
 			    label      	"Serializable")
 			stereotype 	(object ItemLabel
-			    Parent_View 	@24
+			    Parent_View 	@30
 			    location   	(1407, 703)
 			    fill_color 	13434879
 			    anchor     	10
@@ -734,42 +882,42 @@
 			height     	182
 			annotation 	8
 			autoResize 	TRUE)
-		    (object RealizeView "" @25
+		    (object RealizeView "" @31
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"5BE667000371"
-			client     	@14
-			supplier   	@24
+			client     	@20
+			supplier   	@30
 			vertices   	(list Points
 			    (825, 1822)
 			    (1469, 873))
 			line_style 	0)
-		    (object RealizeView "" @26
+		    (object RealizeView "" @32
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"5BE667060168"
-			client     	@20
-			supplier   	@24
+			client     	@26
+			supplier   	@30
 			vertices   	(list Points
 			    (466, 1426)
 			    (1397, 862))
 			line_style 	0)
-		    (object RealizeView "" @27
+		    (object RealizeView "" @33
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"5BE6670901A8"
-			client     	@20
-			supplier   	@23
+			client     	@26
+			supplier   	@29
 			vertices   	(list Points
 			    (385, 1426)
 			    (505, 1091))
 			line_style 	0)
-		    (object RealizeView "" @28
+		    (object RealizeView "" @34
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"5BE6670C0270"
-			client     	@20
-			supplier   	@22
+			client     	@26
+			supplier   	@28
 			vertices   	(list Points
 			    (340, 1426)
 			    (225, 1094))
