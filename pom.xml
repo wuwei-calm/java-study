@@ -10,7 +10,8 @@
   <modules>
     <module>java-study-basic</module>
     <module>java-study-framework-springmvc</module>
-    <!--<module>java-study-framework-springwebmvc</module>-->
+      <module>java-study-ibm-mq</module>
+      <!--<module>java-study-framework-springwebmvc</module>-->
   </modules>
   <packaging>pom</packaging>
 
