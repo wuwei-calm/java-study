@@ -12,6 +12,51 @@
     <artifactId>java-study-ibm-mq</artifactId>
 
     <name>java-study-ibm-mq</name>
+    <dependencies>
+        <dependency>
+            <groupId>com.ibm.mq.commonservices</groupId>
+            <artifactId>com.ibm.mq.commonservices.jar</artifactId>
+            <scope>system</scope>
+            <systemPath>${basedir}/src/main/resources/ibmlib/com.ibm.mq.commonservices.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ibm.mq.headers</groupId>
+            <artifactId>com.ibm.mq.headers.jar</artifactId>
+            <scope>system</scope>
+            <systemPath>${basedir}/src/main/resources/ibmlib/com.ibm.mq.headers.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ibm.mq</groupId>
+            <artifactId>com.ibm.mq.jar</artifactId>
+            <scope>system</scope>
+            <systemPath>${basedir}/src/main/resources/ibmlib/com.ibm.mq.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ibm.mq.jmqi</groupId>
+            <artifactId>com.ibm.mq.jmqi.jar</artifactId>
+            <scope>system</scope>
+            <systemPath>${basedir}/src/main/resources/ibmlib/com.ibm.mq.jmqi.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ibm.mq.pcf</groupId>
+            <artifactId>com.ibm.mq.pcf.jar</artifactId>
+            <scope>system</scope>
+            <systemPath>${basedir}/src/main/resources/ibmlib/com.ibm.mq.pcf.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ibm.mqjms</groupId>
+            <artifactId>com.ibm.mqjms.jar</artifactId>
+            <scope>system</scope>
+            <systemPath>${basedir}/src/main/resources/ibmlib/com.ibm.mqjms.jar</systemPath>
+        </dependency>
+
+
+    </dependencies>
 
 
 </project>
