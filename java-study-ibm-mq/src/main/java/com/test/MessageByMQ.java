@@ -21,11 +21,14 @@ public class MessageByMQ {
          * MQEnvironment的值的设定会在MQQueueManager的构造函数加载的时候起作用
          * 因此必须在建立MQQueueManager对象之前设定MQEnvironment中的值.
          */
-        MQEnvironment.hostname = "127.0.0.1";       //MQ服务器的IP地址
-        MQEnvironment.channel = "CHL_QM1_SERVER";   //服务器连接的通道              
+        MQEnvironment.hostname = "192.168.159.128";       //MQ服务器的IP地址
+        MQEnvironment.channel = "CHANNEL_SERVER";   //服务器连接的通道
         //服务器MQ服务使用的编码1381代表GBK、1208代表UTF-8
         MQEnvironment.CCSID = 1381;
-        MQEnvironment.port = 1415;                  //MQ 端口
+        MQEnvironment.port = 1414;                  //MQ 端口
+        //服务端需要添加一个用户，是如下的用户。才可以完成信息的发送。
+        MQEnvironment.userID = "ZH";
+        MQEnvironment.password = "666666";
         qmName = "QM1";                             //MQ 的队列管理器名称
         qName = "QM1_LOCAL";                        //MQ 远程队列的名称
         try {
@@ -136,7 +139,7 @@ public class MessageByMQ {
     }
     public static void main(String args[]) {
          /*下面两个方法可同时使用，也可以单独使用*/
-        sendMessage("Hi Java MQ!");
+        sendMessage("连接ibmmq成功了!");
         getMessage();
     }
 }
