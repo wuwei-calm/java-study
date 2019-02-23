@@ -12,12 +12,18 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
 
 	<bean id="ibmJmsConnectionFactory" class="com.ibm.mq.jms.MQQueueConnectionFactory">
-		<property name="hostName" value="127.0.0.1" />
-		<property name="port" value="1414" />
-		<property name="CCSID" value="1381" />
-		<property name="queueManager" value="QM1" />
-		<property name="channel" value="CHANNEL_SERVER" />
+		<property name="hostName" value="127.0.0.1" /><!-- 主机ip-->
+		<property name="port" value="1414" /><!-- tcp端口 -->
+		<property name="CCSID" value="1381" /><!-- 编码字符集标识-->
+		<property name="queueManager" value="QM1" />  <!-- 队列管理器名称-->
+		<property name="channel" value="CHANNEL_SERVER" />  <!--服务器连接通道 -->
 		<property name="transportType" value="1" />
+	</bean>
+	<!--使用用户名和密码连接IBM mq ，mq通道认证记录打开的情况下，可以使用这种方式连接-->
+	<bean id="mqNeedUserAndPasswordConnectionFactory" class="org.springframework.jms.connection.UserCredentialsConnectionFactoryAdapter">
+		<property name="username" value="ZH"/>
+		<property name="password" value="666666"/>
+		<property name="targetConnectionFactory" ref="ibmJmsConnectionFactory"/>
 	</bean>
 	<bean id="ibmQueueConnectionFactory" class="org.springframework.jms.connection.CachingConnectionFactory">
 		<property name="targetConnectionFactory" ref="ibmJmsConnectionFactory"/>
@@ -34,5 +40,11 @@
 		<property name="pubSubDomain" value="false" />
 	</bean>
 
+
+	<bean id="ibmUserAndPasswordJmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory" ref="mqNeedUserAndPasswordConnectionFactory" />
+		<property name="defaultDestination" ref="ibmQueue" />
+		<property name="pubSubDomain" value="false" />
+	</bean>
 
 </beans>

@@ -17,7 +17,7 @@ public class SpringJmsTemplateTest {
 
     public static void main(String args[]){
         ClassPathXmlApplicationContext app = new ClassPathXmlApplicationContext("spring.xml");
-        JmsTemplate jmsTemplate  = (JmsTemplate) app.getBean("ibmJmsTemplate");
+        JmsTemplate jmsTemplate  = (JmsTemplate) app.getBean("ibmUserAndPasswordJmsTemplate");
         jmsTemplate.send(new MessageCreator() {
             @Override
             public Message createMessage(Session session) throws JMSException {
@@ -26,5 +26,7 @@ public class SpringJmsTemplateTest {
                 return message;
             }
         });
+
+        System.out.println(jmsTemplate.receiveAndConvert().toString());
     }
 }
