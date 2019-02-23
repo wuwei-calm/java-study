@@ -22,6 +22,9 @@
     <module>java-study-redis</module>
     <module>java-study-dubbo-zookeeper</module>
     <module>java-study-jpa</module>
+    <module>java-study-jvm</module>
+    <module>java-study-thread</module>
+    <module>java-study-spring-cloud</module>
     <!--<module>java-study-framework-springwebmvc</module>-->
   </modules>
   <packaging>pom</packaging>
