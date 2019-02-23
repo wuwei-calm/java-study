@@ -21,7 +21,7 @@ public class MessageByMQ {
          * MQEnvironment的值的设定会在MQQueueManager的构造函数加载的时候起作用
          * 因此必须在建立MQQueueManager对象之前设定MQEnvironment中的值.
          */
-        MQEnvironment.hostname = "192.168.159.128";       //MQ服务器的IP地址
+        MQEnvironment.hostname = "127.0.0.1";       //MQ服务器的IP地址
         MQEnvironment.channel = "CHANNEL_SERVER";   //服务器连接的通道
         //服务器MQ服务使用的编码1381代表GBK、1208代表UTF-8
         MQEnvironment.CCSID = 1381;

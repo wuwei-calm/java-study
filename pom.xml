@@ -10,8 +10,8 @@
   <modules>
     <module>java-study-basic</module>
     <module>java-study-framework-springmvc</module>
-      <module>java-study-ibm-mq</module>
-      <!--<module>java-study-framework-springwebmvc</module>-->
+    <module>java-study-ibm-mq</module>
+    <!--<module>java-study-framework-springwebmvc</module>-->
   </modules>
   <packaging>pom</packaging>
 
@@ -23,6 +23,7 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <junit.version>4.11</junit.version>
     <org.springframework.version>5.1.2-DEBUG</org.springframework.version>
+    <org.springframework.version.prod>5.1.2.RELEASE</org.springframework.version.prod>
     <org.aspectj.version></org.aspectj.version>
     <org.aspectj.version>1.6.10</org.aspectj.version>
     <org.slf4j.version>1.6.6</org.slf4j.version>
