@@ -21,6 +21,7 @@
     <module>java-study-rocketmq</module>
     <module>java-study-redis</module>
     <module>java-study-dubbo-zookeeper</module>
+    <module>java-study-jpa</module>
     <!--<module>java-study-framework-springwebmvc</module>-->
   </modules>
   <packaging>pom</packaging>
