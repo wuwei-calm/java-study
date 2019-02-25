@@ -197,7 +197,12 @@
       <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
-
+    <!-- 创建线程池需要这个包中的BasicThreadFactory -->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.8.1</version>
+    </dependency>
 
 
   </dependencies>

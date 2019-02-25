@@ -156,7 +156,7 @@ public class FutureTask<V> implements RunnableFuture<V> {
     public boolean isCancelled() {
         return state >= CANCELLED;
     }
-
+    //任务是否正在进行
     public boolean isDone() {
         return state != NEW;
     }

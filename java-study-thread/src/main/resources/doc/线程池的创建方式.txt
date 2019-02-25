@@ -1,0 +1,10 @@
+线程池不建议使用Executors去创建，而是通过ThreadPoolExecutor的方式，
+这样的处理方式让写代码的同学更清楚线程池的运行规则，规避资源消耗的风险。
+Executors各个方法的弊端：
+    newFixedThreadPool和newSingleThreadExecutor
+    主要问题是堆积的请求处理队列可能会耗非常大得内存，甚至OOM.
+    newCacheThreadPool和newScheduledThreadPool：
+    主要问题是线程最大数是Integer.MAX_VALUE,可能会创建线程非常多的线程，甚至会OOM.
+
+
+
