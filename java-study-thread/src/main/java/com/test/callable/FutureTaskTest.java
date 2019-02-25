@@ -49,5 +49,25 @@ public class FutureTaskTest {
 
         //第三种
         //第二种  xml配置线程池
+
+        /**
+
+         <bean id="userThreadPool"
+         class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+         <property name="corePoolSize" value="10" />
+         <property name="maxPoolSize" value="100" />
+         <property name="queueCapacity" value="2000" />
+
+         <property name="threadFactory" value= threadFactory />
+         <property name="rejectedExecutionHandler">
+         <ref local="rejectedExecutionHandler" />
+         </property>
+         </bean>
+         //in code
+         userThreadPool.execute(thread);
+
+
+
+         * */
     }
 }
