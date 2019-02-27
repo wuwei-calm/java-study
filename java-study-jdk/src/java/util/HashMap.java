@@ -37,11 +37,11 @@ import java.util.function.Function;
 import sun.misc.SharedSecrets;
 
 /**
- * Hash table based implementation of the <tt>Map</tt> interface.  This
- * implementation provides all of the optional map operations, and permits
- * <tt>null</tt> values and the <tt>null</tt> key.  (The <tt>HashMap</tt>
- * class is roughly equivalent to <tt>Hashtable</tt>, except that it is
- * unsynchronized and permits nulls.)  This class makes no guarantees as to
+ * 基于哈希表的<tt> Map </ tt>接口的实现。
+ * 此实现提供了所有可选的映射操作，
+ * 并允许null值和null键。
+ * (HashMap类大致相当于<tt> Hashtable </ tt>，
+ * 除了它是不同步的并且允许空值。)  This class makes no guarantees as to
  * the order of the map; in particular, it does not guarantee that the order
  * will remain constant over time.
  *
@@ -236,53 +236,44 @@ public class HashMap<K,V> extends AbstractMap<K,V>
     static final int DEFAULT_INITIAL_CAPACITY = 1 << 4; // aka 16
 
     /**
-     * The maximum capacity, used if a higher value is implicitly specified
-     * by either of the constructors with arguments.
-     * MUST be a power of two <= 1<<30.
+     * 最大容量, 如果具有参数的任一构造函数隐式指定更高的值，则使用此参数。
+     * 必须是2的幂<= 1 << 30。 1073741824  10亿
      */
-    static final int MAXIMUM_CAPACITY = 1 << 30;
+    static final int MAXIMUM_CAPACITY = 1 << 30; //
 
     /**
-     * The load factor used when none specified in constructor.
+     * 在构造函数中未指定时使用的加载因子。
      */
     static final float DEFAULT_LOAD_FACTOR = 0.75f;
 
     /**
-     * The bin count threshold for using a tree rather than list for a
-     * bin.  Bins are converted to trees when adding an element to a
-     * bin with at least this many nodes. The value must be greater
-     * than 2 and should be at least 8 to mesh with assumptions in
-     * tree removal about conversion back to plain bins upon
-     * shrinkage.
+     使用树而不是bin的列表的bin计数阈值。
+     将元素添加到具有至少这么多节点的bin时，bin被转换为树。 该值必须大于2且应至少为8才能与树木移除中的假设相关联，以便在收缩时转换回普通箱。
      */
     static final int TREEIFY_THRESHOLD = 8;
 
     /**
-     * The bin count threshold for untreeifying a (split) bin during a
-     * resize operation. Should be less than TREEIFY_THRESHOLD, and at
-     * most 6 to mesh with shrinkage detection under removal.
+     用于在调整大小操作期间解除（拆分）bin的bin计数阈值。应该小于TREEIFY_THRESHOLD， 并且最多6个与去除时的收缩检测啮合。
      */
     static final int UNTREEIFY_THRESHOLD = 6;
 
     /**
-     * The smallest table capacity for which bins may be treeified.
-     * (Otherwise the table is resized if too many nodes in a bin.)
-     * Should be at least 4 * TREEIFY_THRESHOLD to avoid conflicts
-     * between resizing and treeification thresholds.
+     * 容器可以树化的最小容量。
+     * (否则，如果bin中的节点太多，则会调整表的大小。)
+     * 应至少为4 * TREEIFY_THRESHOLD，以避免调整大小和树化阈值之间的冲突。
      */
     static final int MIN_TREEIFY_CAPACITY = 64;
 
     /**
-     * Basic hash bin node, used for most entries.  (See below for
-     * TreeNode subclass, and in LinkedHashMap for its Entry subclass.)
+     * 基本哈希bin节点， 用于大多数条目。  (请参阅下面的TreeNode子类，以及LinkedHashMap中的Entry子类。)
      */
     static class Node<K,V> implements Map.Entry<K,V> {
         final int hash;
         final K key;
         V value;
-        Node<K,V> next;
+        Node<K,V> next;  //下一个节点
 
-        Node(int hash, K key, V value, Node<K,V> next) {
+        Node(int hash, K key, V value, Node<K,V> next) {  //构造方法
             this.hash = hash;
             this.key = key;
             this.value = value;

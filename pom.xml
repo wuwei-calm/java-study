@@ -26,6 +26,7 @@
     <module>java-study-thread</module>
     <module>java-study-spring-cloud</module>
     <module>java-study-jdk</module>
+      <module>java-study-design-pattern</module>
   </modules>
   <packaging>pom</packaging>
 
