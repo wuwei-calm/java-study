@@ -5,7 +5,7 @@ package com.test.basic;
  * 数组反转
  * @date 2019/3/13
  */
-public class GetMaxValueInArray {
+public class RevertArray {
     public static void main(String args[]){
 
         int a[] = {1,3,5,6,7,8,9};
