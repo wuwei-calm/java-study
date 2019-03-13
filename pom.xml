@@ -27,6 +27,7 @@
     <module>java-study-spring-cloud</module>
     <module>java-study-jdk</module>
       <module>java-study-design-pattern</module>
+      <module>java-study-netty</module>
   </modules>
   <packaging>pom</packaging>
 
