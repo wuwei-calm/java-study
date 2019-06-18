@@ -29,6 +29,7 @@
       <module>java-study-design-pattern</module>
       <module>java-study-netty</module>
       <module>java-study-shiro</module>
+      <module>java-study-mvc</module>
   </modules>
   <packaging>pom</packaging>
 
