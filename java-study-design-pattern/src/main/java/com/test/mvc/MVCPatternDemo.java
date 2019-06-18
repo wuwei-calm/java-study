@@ -1,4 +1,4 @@
-package com.test;
+package com.test.mvc;
 
 public class MVCPatternDemo {
     public static void main(String[] args) {

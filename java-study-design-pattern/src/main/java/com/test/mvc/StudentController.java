@@ -1,4 +1,4 @@
-package com.test;
+package com.test.mvc;
 
 /**
  * mvc设计模式可以这样理解，controller是数据显示的和查询的中介，经过这个中介，数据得以显示，

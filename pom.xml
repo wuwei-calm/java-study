@@ -29,7 +29,6 @@
       <module>java-study-design-pattern</module>
       <module>java-study-netty</module>
       <module>java-study-shiro</module>
-      <module>java-study-mvc</module>
   </modules>
   <packaging>pom</packaging>
 
@@ -112,7 +111,7 @@
       <version>${org.aspectj.version}</version>
     </dependency>
 
-    <!-- Logging -->
+    <!-- Logging
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
@@ -135,7 +134,7 @@
       <artifactId>log4j</artifactId>
       <version>${log4j.version}</version>
     </dependency>
-
+     -->
     <!-- @Inject -->
     <dependency>
       <groupId>javax.inject</groupId>
