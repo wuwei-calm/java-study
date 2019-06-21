@@ -10,15 +10,14 @@
   <modules>
       <module>java-study-basic</module>
       <module>java-study-framework-springmvc</module>
-      <module>java-study-ibm-mq</module>
-      <module>java-study-activemq</module>
+
       <module>java-study-mybatis</module>
       <module>java-study-hibernate</module>
       <module>java-study-struts2</module>
       <module>java-study-jdbcTemplate</module>
       <module>java-study-mysql</module>
       <module>java-study-oracle</module>
-      <module>java-study-rocketmq</module>
+
       <module>java-study-redis</module>
       <module>java-study-dubbo-zookeeper</module>
       <module>java-study-jpa</module>
@@ -31,6 +30,7 @@
       <module>java-study-shiro</module>
     <module>java-study-sso-cas</module>
       <module>java-study-fastdfs</module>
+    <module>java-study-mq</module>
   </modules>
   <packaging>pom</packaging>
 
