@@ -30,6 +30,7 @@
       <module>java-study-netty</module>
       <module>java-study-shiro</module>
     <module>java-study-sso-cas</module>
+      <module>java-study-fastdfs</module>
   </modules>
   <packaging>pom</packaging>
 
