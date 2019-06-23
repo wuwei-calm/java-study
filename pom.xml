@@ -21,6 +21,7 @@
       <module>java-study-fastdfs</module>
       <module>java-study-mq</module>
       <module>java-study-framework</module>
+      <module>java-study-doc-pdf</module>
   </modules>
   <packaging>pom</packaging>
 
