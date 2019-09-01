@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>java-study-pay</artifactId>
+        <groupId>com.test</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>ali-pay</artifactId>
+
+    <name>ali-pay</name>
+    <packaging>war</packaging>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alipay.demo.trade</groupId>
+            <artifactId>alipay-trade-sdk-20161215</artifactId>
+            <version>20161215</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/src/main/resources/lib/alipay-trade-sdk-20161215.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons.lang</groupId>
+            <artifactId>commons-lang-2.6</artifactId>
+            <version>2.6</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/src/main/resources/lib/commons-lang-2.6.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.alipay.api</groupId>
+            <artifactId>alipay-sdk-java-3.3.0</artifactId>
+            <version>3.3.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/src/main/resources/lib/alipay-sdk-java-3.3.0.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons.codec</groupId>
+            <artifactId>commons-codec-1.10</artifactId>
+            <version>1.10</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/src/main/resources/lib/commons-codec-1.10.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons.configuration</groupId>
+            <artifactId>commons-configuration-1.10</artifactId>
+            <version>1.10</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/src/main/resources/lib/commons-configuration-1.10.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons.logging</groupId>
+            <artifactId>commons-logging-1.1.1</artifactId>
+            <version>1.1.1</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/src/main/resources/lib/commons-logging-1.1.1.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>core-2.1</artifactId>
+            <version>2.1</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/src/main/resources/lib/core-2.1.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.gson</groupId>
+            <artifactId>gson-2.3.1</artifactId>
+            <version>2.3.1</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/src/main/resources/lib/gson-2.3.1.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-core-1.3</artifactId>
+            <version>1.3</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/src/main/resources/lib/hamcrest-core-1.3.jar</systemPath>
+        </dependency>
+
+    </dependencies>
+
+
+
+    <build>
+        <finalName>alipay</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat6-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <port>8080</port>
+                    <path>/</path>
+                    <uriEncoding>UTF-8</uriEncoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <encoding>utf8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+        <resources>
+            <resource>
+                <filtering>true</filtering>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>*</include>
+                    <include>*/**</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+</project>

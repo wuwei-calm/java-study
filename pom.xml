@@ -22,6 +22,7 @@
       <module>java-study-mq</module>
       <module>java-study-framework</module>
       <module>java-study-doc-pdf</module>
+      <module>java-study-pay</module>
   </modules>
   <packaging>pom</packaging>
 
