@@ -1,0 +1,7 @@
+*.class
+/java-study-thread/target/
+/java-study-design-pattern/target/classes/com/test/
+/java-study-basic/target/
+/.idea/
+/java-study-pay/ali-pay/target/
+/java-study-framework/java-study-netty/target/
