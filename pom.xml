@@ -33,7 +33,7 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <junit.version>4.11</junit.version>
-    <org.springframework.version>5.1.2.RELEASE</org.springframework.version>
+    <org.springframework.version>5.2.3.RELEASE</org.springframework.version>
     <org.springframework.version.prod>5.1.2.RELEASE</org.springframework.version.prod>
     <org.aspectj.version></org.aspectj.version>
     <org.aspectj.version>1.6.10</org.aspectj.version>
